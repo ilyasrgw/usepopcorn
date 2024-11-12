@@ -28,6 +28,7 @@ export function useMovies(query) {
           if (data.Response === "False") throw new Error("Movie not found");
 
           setMovies(data.Search);
+          console.log(data);
           console.log(data.Search);
           setError("");
         } catch (err) {
@@ -46,7 +47,7 @@ export function useMovies(query) {
         return;
       }
 
-      //   handleCloseMovie();
+      // handleCloseMovie();
       fetchMovies();
 
       return function () {
